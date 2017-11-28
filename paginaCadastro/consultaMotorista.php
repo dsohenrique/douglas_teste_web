@@ -1,4 +1,5 @@
 <?php
+include 'menu.php';	
 	
 		$servidor = "localhost";
 		$usuario = "root";
@@ -11,6 +12,7 @@
 		
 	$consulta = mysqli_query($conexao, $dadosBanco);
 
+		echo '<h1 align="center">Consultar motorista</h1>';
 		echo '<table border = 1 >';
 
 		echo '<tr>';

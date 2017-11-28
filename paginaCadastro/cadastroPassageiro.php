@@ -1,4 +1,5 @@
 <?php	
+include 'menu.php';	
 if ($_POST) 
 		{
 			$servidor = "localhost";
@@ -31,6 +32,7 @@ if ($_POST)
 		   
 	</head>
 	<body>
+		<h1 align="center">Cadstrar passageiro</h1>
 		<form name="frmCadastro" action="cadastroPassageiro.php" method="POST">
 			<div class="form-group">
 				Nome *: 

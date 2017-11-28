@@ -1,3 +1,6 @@
+<?php
+include 'menu.php';	
+?>
 <html lang="pt-br">
 	<head>
 	<meta charset="utf-8"/>
@@ -7,17 +10,6 @@
 		    
 	</head>
 	<body>
-		<div class="row">
-		<div class="col-sm-4">
-		<h1>Cadastre aqui<h1/>
-			<a href = "cadastroMotorista.php"> CADASTRAR MOTORISTA<a/><br/><br/>
-			<a href = "cadastroPassageiro.php"> CADASTRAR PASSAGEIRO<a/><br/><br/>
-			<a href = "alteracao.php"> ALTERAR MOTORISTA<a/><br/><br/>
-			<a href = "consultaMotorista.php"> CONSULTAR MOTORISTAS<a/><br/><br/>	
-			<a href = "consultaPassageiro.php"> CONSULTAR PASSAGEIROS<a/><br/><br/>	
-			<a href = "cadastroCorrida.php"> REGISTRO DE CORRIDAS<a/><br/><br/>		
-		<div/>
-		<div/>
-	 
+		<h1 align="Center">Bem vindo ao Sistema	</h1>
 	</body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+	include 'menu.php';	
 	if ($_POST) 
 	{
 		$servidor = "localhost";
@@ -14,7 +15,7 @@
 		
 		$result = "UPDATE tb_motorista SET st_motorista ='$statusMotorista' WHERE cpf_motorista ='$cpf' ";
 
-		if (mysql_num_rows($verifica) > 0) {
+		if (mysqli_num_rows($verifica) > 0) {
 		mysqli_query($conexao, $result);
 		echo "Status do motorista com cpf $cpf alterado com sucesso";
 		}
@@ -32,6 +33,7 @@
 		
 	</head>
 	<body>
+		<h1 align="center">Alterar motorista</h1>
 		<form name="frmCadastro" action="alteracao.php" method="POST">
 			<div class="form-group">
 				Cpf *:

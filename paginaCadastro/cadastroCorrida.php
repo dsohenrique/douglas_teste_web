@@ -1,26 +1,41 @@
-<?php	
+<?php
+	include 'menu.php';	
 if ($_POST) 
 		{
+			error_reporting(0);
 			$servidor = "localhost";
 			$usuario = "root";
 			$senha = "";
 			$banco = "empresa";
 
+
 			$conexao = mysqli_connect($servidor, $usuario, $senha) or die (mysqli_error());
 			$db =  mysqli_select_db($conexao, $banco);
-
+			
 			$nomePassageiro = $_POST['txtNomePassageiro'];
 			$nomeMotorista = $_POST['txtNomeMotorista'];
 			$valor = $_POST['txtValorCorrida'];
 
+			$buscaStatus = ("SELECT st_motorista FROM tb_motorista WHERE nm_motorista = '".$_POST['txtNomeMotorista']."'");
+			$validaStatus = mysqli_query($conexao, $buscaStatus);
 
+
+			while($status = mysqli_fetch_assoc( $validaStatus)){
+ 			
+       		if(mysqli_num_rows($validaStatus)){
+       		if($status['st_motorista'] == 'Inativo'){	
+
+			 "Motorista $nomeMotorista inativo";
+             die();
+			}
 			$query = "INSERT INTO tb_corrida  VALUES  ( '',  '$valor', '$nomePassageiro', '$nomeMotorista')";
 	  		$executa = mysqli_query($conexao, $query);
-			if ($query) {
-				echo "<p>Corrida inserida com sucesso</p>";
+			echo "<p>Corrida inserida com sucesso</p>";
+			
 			}
-				 
-		}
+			mysqli_free_result($validaStatus);
+			}
+	}
 ?>		 
 <html lang="pt-br">
 	<head>
@@ -31,6 +46,7 @@ if ($_POST)
 		   
 	</head>
 	<body>
+		<h1 align="center">Marcar uma corrida</h1>
 		<form name="frmCadastro" action="cadastroCorrida.php" method="POST">
 			<div class="form-group">
 				Nome do passageiro *: 
