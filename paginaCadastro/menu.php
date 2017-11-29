@@ -14,12 +14,13 @@
 		    </div>
 		    <ul class="nav navbar-nav"><br>
 
+			<li><a href = "cadastroCorrida.php"> REGISTRO DE CORRIDAS 		<a/></li>
 		    <li><a href = "cadastroMotorista.php"> CADASTRAR MOTORISTAS		<a/></li>
 			<li><a href = "cadastroPassageiro.php"> CADASTRAR PASSAGEIRO 	<a/></li>
-			<li><a href = "alteracao.php"> ALTERAR MOTORISTAS 				<a/></li>
+			<li><a href = "consultaCorrida.php"> CONSULTAR CORRIDAS 		<a/></li>
 			<li><a href = "consultaMotorista.php"> CONSULTAR MOTORISTAS 	<a/></li>
 			<li><a href = "consultaPassageiro.php"> CONSULTAR PASSAGEIROS 	<a/></li>
-			<li><a href = "cadastroCorrida.php"> REGISTRO DE CORRIDAS 		<a/></li>
+			<li><a href = "alteracao.php"> ALTERAR MOTORISTAS 				<a/></li>
 
 		    </ul>
 		  </div>
